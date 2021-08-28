@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.github.Tricketteh</groupId>
 	<artifactId>triche-telegrambot</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0-SNAPSHOT</version>
 	<name>Triche Telegram Bot</name>
-	<description>Triche&apos;s Telegram Bot written in Java</description>
+	<description>Triche's Telegram Bot written in Java</description>
 	<properties>
 		<java.version>16</java.version>
 	</properties>
