@@ -1,6 +1,17 @@
 ## Overview
 Simple Telegram bot written in Java.
 
+## Deployment
+Deployment process is following:
+Required software:
+- terminal for running bash scripts
+- docker
+- docker-compose
+
+to deploy application, switch to needed branch and run bash script:
+
+$ bash start.sh ${bot_username} ${bot_token}
+
 ## Release Notes
 Can be found in [RELEASE_NOTES](RELEASE_NOTES.md).
 
