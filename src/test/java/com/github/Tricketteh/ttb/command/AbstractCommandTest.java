@@ -3,14 +3,13 @@ package com.github.Tricketteh.ttb.command;
 import com.github.Tricketteh.ttb.bot.TricheTgBot;
 import com.github.Tricketteh.ttb.service.SendBotMessageService;
 import com.github.Tricketteh.ttb.service.SendBotMessage;
+import com.github.Tricketteh.ttb.service.TelegramUserService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import org.mockito.internal.verification.VerificationModeFactory;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import org.xml.sax.SAXNotRecognizedException;
 
 /*
 Abstract class for testing {@link Command}s.
@@ -18,6 +17,7 @@ Abstract class for testing {@link Command}s.
 abstract class AbstractCommandTest {
     protected TricheTgBot tricheTgBot = Mockito.mock(TricheTgBot.class);
     protected SendBotMessageService sendBotMessageService = new SendBotMessage(tricheTgBot);
+    protected TelegramUserService telegramUserService = Mockito.mock(TelegramUserService.class);
 
     abstract String getCommandName();
 

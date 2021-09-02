@@ -2,6 +2,8 @@ package com.github.Tricketteh.ttb.bot;
 
 import com.github.Tricketteh.ttb.command.CommandContainer;
 import com.github.Tricketteh.ttb.service.SendBotMessage;
+import com.github.Tricketteh.ttb.service.TelegramUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Value;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -26,8 +28,9 @@ public class TricheTgBot extends TelegramLongPollingBot {
 
     private final CommandContainer commandContainer;
 
-    public TricheTgBot(){
-        this.commandContainer = new CommandContainer(new SendBotMessage(this));
+    @Autowired
+    public TricheTgBot(TelegramUserService telegramUserService) {
+        this.commandContainer = new CommandContainer(new SendBotMessage(this), telegramUserService);
     }
 
     @Override

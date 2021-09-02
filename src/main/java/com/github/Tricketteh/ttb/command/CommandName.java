@@ -9,15 +9,18 @@ public enum CommandName {
     START("/start"),
     HELP("/help"),
     NO(" "),
+    STAT("/stat"),
     STOP("/stop");
 
     private final String CommandName;
 
     CommandName(String commandName){
+
         this.CommandName = commandName;
     }
 
     public String getCommandName(){
+
         return this.CommandName;
     }
 
